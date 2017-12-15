@@ -39,10 +39,7 @@ class JGPDFCreatorViewController: UIViewController,UITableViewDelegate,UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+        
         
         let logo=UIImage.init(named: "logo_es")!
         let body=UIImage.init(named: "body_es")!
@@ -73,6 +70,11 @@ class JGPDFCreatorViewController: UIViewController,UITableViewDelegate,UITableVi
         
         table.frame=CGRect(x: 0, y: 0, width: 920, height: heigthTable)
         table.separatorStyle = .none
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
         
         let image=UIImage.init(view: table)
         
