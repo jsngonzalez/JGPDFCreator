@@ -84,8 +84,10 @@ class JGPDFCreatorViewController: UIViewController,UITableViewDelegate,UITableVi
         data?.write(to: filename, atomically: true)
         //print(filename.absoluteString)
         
-        finalCallback(filename.absoluteString)
-        self.dismiss(animated: true, completion: nil)
+        
+        self.dismiss(animated: true, completion:{
+            self.finalCallback(filename.path)
+        })
     }
     
     func getDocumentsDirectory() -> URL {
